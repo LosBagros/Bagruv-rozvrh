@@ -3,7 +3,7 @@ setInterval(async function () {
 }, 30000);
 getJson();
 async function getJson() {
-  const response = await fetch("./exampleData.json");
+  const response = await fetch("https://rozvrh-api.bagros.eu/");
   const data = await response.json();
 
   let subjectId;
@@ -14,7 +14,7 @@ async function getJson() {
   let room;
   let html;
   let hours;
- console.log("call");
+
   for (let j = 0; j < data.Days.length; j++) {
     hours = document.querySelector("#data").children[j].children;
     date = data.Days[j].Date;
@@ -38,5 +38,6 @@ async function getJson() {
       hours[i + 1].innerHTML = html;
     }
   }
+  console.log("Data updated...");
   return;
 }
