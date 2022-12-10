@@ -1,7 +1,12 @@
-setInterval(async function () {
-  await getJson();
-}, 3600000);
 getJson();
+setInterval(async function() {
+  var time = new Date();
+  var minutes = time.getMinutes();
+
+  if (minutes % 10 === 5) {
+    await getJson();
+  }
+}, 60000);
 async function getJson() {
   const response = await fetch("https://rozvrh-api.bagros.eu/");
   const data = await response.json();
