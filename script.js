@@ -1,6 +1,6 @@
 setInterval(async function () {
   await getJson();
-}, 30000);
+}, 3600000);
 getJson();
 async function getJson() {
   const response = await fetch("https://rozvrh-api.bagros.eu/");
