@@ -1,14 +1,13 @@
+let time = new Date();
+let minutes = time.getMinutes();
 getJson();
 setInterval(async function () {
-  var time = new Date();
-  var minutes = time.getMinutes();
-
   if (minutes % 10 === 5) {
     await getJson();
   }
 }, 60000);
 async function getJson() {
-  const response = await fetch("https://rozvrh-api.bagros.eu/");
+  const response = await fetch("./exampleData.json");
   const data = await response.json();
 
   let subjectId;
@@ -19,6 +18,7 @@ async function getJson() {
   let room;
   let html;
   let hours;
+  let day;
 
   table = document.querySelector("#data");
   html = "<thead><tr><th></th>";
@@ -29,8 +29,16 @@ async function getJson() {
       hours = data.Days[i].Atoms.length;
     }
   }
-  if(hours == 0) {hours = 8}
+  let firstHour = 0;
+  if (hours == 0) { hours = 8 }
   for (let i = 0; i < hours; i++) {
+    if (data.Hours[i].BeginTime == "8:00") {
+      firstHour = i;
+      break;
+    }
+  }
+  let timeString = time.getHours() + ":" + time.getMinutes();
+  for (let i = firstHour; i < firstHour + hours; i++) {
     html += `<th>${data.Hours[i].Caption}<br />${data.Hours[i].BeginTime}-${data.Hours[i].EndTime}</th>`;
   }
   html += "</tr></thead>";
@@ -38,25 +46,33 @@ async function getJson() {
     html += "<tr>";
     date = data.Days[j].Date;
     date = date.slice(8, 10) + "." + date.slice(5, 7) + ".";
-    let day = new Date(data.Days[j].Date);
+    day = new Date(data.Days[j].Date);
     day = day.toLocaleDateString("cs-CZ", { weekday: "short" });
     html += `<td><br /><strong>${day}</strong><br />${date}</td>`;
     if (data.Days[j].DayDescription != "" && data.Days[j].DayType != "WorkDay") {
-      html += `<td colspan="${hours}"><br /><span class="event">${data.Days[j].DayDescription}</span><br /><br /></td>`;
-    } else if(data.Days[j].DayDescription == "" && data.Days[j].DayType != "WorkDay") {
-      html += `<td colspan="${hours}"><br /><span class="event">${data.Days[j].DayType}</span><br /><br /></td>`;
+      html += `<td colspan="${hours}" class="event"><br />${data.Days[j].DayDescription}<br /><br /></td>`;
+    } else if (data.Days[j].DayDescription == "" && data.Days[j].DayType != "WorkDay") {
+      html += `<td colspan="${hours}" class="event"><br />${data.Days[j].DayType}<br /><br /></td>`;
     } else {
       for (let i = 0; i < data.Days[j].Atoms.length; i++) {
         subjectId = data.Days[j].Atoms[i].SubjectId;
         if (subjectId == null) {
-          html += `<td><br /><br /><span class="removed">Removed</span><br /><br /><br /></td>`;
+          html += `<td class="removed"><br /><br />Removed<br /><br /><br /></td>`;
         } else {
           teacherId = data.Days[j].Atoms[i].TeacherId;
           roomId = data.Days[j].Atoms[i].RoomId;
           subject = data.Subjects.find((x) => x.Id == subjectId).Abbrev;
           teacher = data.Teachers.find((x) => x.Id == teacherId).Abbrev;
           room = data.Rooms.find((x) => x.Id == roomId).Abbrev;
-          html += `<td><br /><strong>${subject}</strong><br />${teacher}<br />${room}<br /><br /></td>`;
+          date1 = new Date(data.Days[j].Date.slice(0, 10));
+          date2 = new Date(time.toISOString().slice(0, 10));
+          if (timeString >= data.Hours[i-1 + firstHour].EndTime && timeString < data.Hours[i + firstHour].EndTime && data.Days[j].Date.slice(0, 10) == time.toISOString().slice(0, 10)) {
+            html += `<td class="event"><br /><strong>${subject}</strong><br />${teacher}<br />${room}<br /><br /></td>`;
+          } else if(timeString < data.Hours[i + firstHour].EndTime && date1.getTime() <= date2.getTime()){
+            html += `<td class="passed"><br /><strong>${subject}</strong><br />${teacher}<br />${room}<br /><br /></td>`;
+          } else {
+            html += `<td><br /><strong>${subject}</strong><br />${teacher}<br />${room}<br /><br /></td>`;
+          }
         }
       }
       html += "</tr>";

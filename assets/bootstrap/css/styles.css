@@ -15,3 +15,6 @@ body {
     color: green;
     font-weight: bold;
 }
+.passed {
+    color: #E68200;
+}
