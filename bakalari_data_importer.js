@@ -42,20 +42,22 @@ async function getTimetable(bearerToken) {
             Authorization: `Bearer ${bearerToken.access_token}`,
         },
     };
-    const date = new Date();
-    const day = date.getDay();
-    const hour = date.getHours();
-    if (day >= 5 && hour >= 15) {
-        date.setDate(date.getDate() + 3);
+
+    let time = new Date();
+    let date = time.getDate();
+    let day = time.getDay();
+    if (day == 5 && time.getHours() >= 15) {
+        time.setDate(date + 3);
+    } else if (day == 6) {
+        time.setDate(date + 2);
+    } else if (day == 0) {
+        time.setDate(date + 1);
     }
-    const dateString = date.toISOString().split("T")[0];
+    const dateString = time.toISOString().split("T")[0];
     const response = await fetch(`https://spsul.bakalari.cz/api/3/timetable/actual?date=${dateString}`, options);
     if (response.ok) {
         const json = await response.json();
         return json;
-    } else {
-        console.log('Error:')
-        console.log(response);
     }
     return null;
 }
@@ -65,12 +67,11 @@ addEventListener("fetch", (event) => {
         const reqDate = Math.floor(Date.now() / 1000);
         let bearerToken = await BKDB.get("token", "json");
         if (!bearerToken) { bearerToken = await getBearerToken() }
-        if (bearerToken.time + bearerToken.expires_in + 360 < reqDate) { bearerToken = await refreshBearerToken(bearerToken) }
+        if (bearerToken.time + bearerToken.expires_in + 960 < reqDate) { bearerToken = await refreshBearerToken(bearerToken) }
         await BKDB.put("token", JSON.stringify(bearerToken));
         const timetable = await getTimetable(bearerToken);
 
         let timetableString = JSON.stringify(timetable);
-        console.log(timetableString);
         let hours = timetableString.search("Hours");
         if (hours != -1) {
             await BKDB.put("timetable", JSON.stringify(timetable));
