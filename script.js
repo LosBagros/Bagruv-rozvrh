@@ -1,4 +1,5 @@
 let time = new Date();
+let timeNow = new Date(time.getFullYear(), time.getMonth(), time.getDate(), time.getHours(), time.getMinutes());
 let minutes = time.getMinutes();
 getJson();
 setInterval(async function () {
@@ -7,7 +8,7 @@ setInterval(async function () {
   }
 }, 60000);
 async function getJson() {
-  const response = await fetch("./exampleData.json");
+  const response = await fetch("https://rozvrh-api.bagros.eu/");
   const data = await response.json();
 
   let subjectId;
@@ -19,7 +20,17 @@ async function getJson() {
   let html;
   let hours;
   let day;
+  let startArr;
+  let startHours;
+  let startMinutes;
+  let start;
+  let endArr;
+  let endHours;
+  let endMinutes;
+  let end;
+  let date;
 
+  
   table = document.querySelector("#data");
   html = "<thead><tr><th></th>";
 
@@ -37,7 +48,6 @@ async function getJson() {
       break;
     }
   }
-  let timeString = time.getHours() + ":" + time.getMinutes();
   for (let i = firstHour; i < firstHour + hours; i++) {
     html += `<th>${data.Hours[i].Caption}<br />${data.Hours[i].BeginTime}-${data.Hours[i].EndTime}</th>`;
   }
@@ -64,11 +74,19 @@ async function getJson() {
           subject = data.Subjects.find((x) => x.Id == subjectId).Abbrev;
           teacher = data.Teachers.find((x) => x.Id == teacherId).Abbrev;
           room = data.Rooms.find((x) => x.Id == roomId).Abbrev;
-          date1 = new Date(data.Days[j].Date.slice(0, 10));
-          date2 = new Date(time.toISOString().slice(0, 10));
-          if (timeString >= data.Hours[i-1 + firstHour].EndTime && timeString < data.Hours[i + firstHour].EndTime && data.Days[j].Date.slice(0, 10) == time.toISOString().slice(0, 10)) {
+
+          startArr = data.Hours[i-1 + firstHour].EndTime.split(":");
+          startHours = parseInt(startArr[0], 10);
+          startMinutes = parseInt(startArr[1], 10);
+          start = new Date(time.getFullYear(), time.getMonth(), time.getDate(), startHours, startMinutes);
+          endArr = data.Hours[i + firstHour].EndTime.split(":");
+          endHours = parseInt(endArr[0], 10);
+          endMinutes = parseInt(endArr[1], 10);
+          end = new Date(time.getFullYear(), time.getMonth(), time.getDate(), endHours, endMinutes);
+          
+          if (timeNow >= start && timeNow < end && data.Days[j].Date.slice(0, 10) == time.toISOString().slice(0, 10)) {
             html += `<td class="event"><br /><strong>${subject}</strong><br />${teacher}<br />${room}<br /><br /></td>`;
-          } else if(timeString < data.Hours[i + firstHour].EndTime && date1.getTime() <= date2.getTime()){
+          } else if(timeNow > end && data.Days[j].Date.slice(0, 10) == time.toISOString().slice(0, 10)){
             html += `<td class="passed"><br /><strong>${subject}</strong><br />${teacher}<br />${room}<br /><br /></td>`;
           } else {
             html += `<td><br /><strong>${subject}</strong><br />${teacher}<br />${room}<br /><br /></td>`;
