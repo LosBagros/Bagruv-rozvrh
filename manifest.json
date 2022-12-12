@@ -1,17 +1,15 @@
 {
-  "background_color": "#212529",
-  "description": "Bagruv rozvrh kdyz bakalari down",
-  "dir": "ltr",
-  "display": "standalone",
-  "name": "Bagruv Rozvrh",
-  "orientation": "any",
-  "scope": "/",
   "short_name": "Rozvrh",
+  "name": "Bagruv Rozvrh",
+  "icons": [
+  {
+  "src":"./timetable.png",
+  "sizes": "192x192",
+  "type": "image/png"
+  }
+  ],
   "start_url": "/",
+  "background_color": "#212529",
   "theme_color": "#212529",
-  "categories": [],
-  "screenshots": [],
-  "icons": ["timetable.png"],
-  "shortcuts": [],
-  "display_override": []
+  "display": "standalone"
 }
