@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
     <title>Bagrův Rozvrh</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/bootstrap/css/styles.css">
-    <link rel="icon" href="timetable.png" type="image/png" sizes="16x16">
-</head>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/styles.css" />
+    <link rel="icon" href="timetable.png" type="image/png" sizes="16x16" />
+  </head>
 
-<body>
-<h1 class="text-center text-warning mt-3">Bagrův Rozvrh</h1>
+  <body>
+    <h1 class="text-center text-warning mt-3">Bagrův Rozvrh</h1>
     <div class="table-responsive text-center align-items-center t-center">
-        <table id="data" class="table table-dark">
-        </table>
+      <table id="data" class="table table-dark"></table>
     </div>
     <script src="script.js"></script>
     <script>
-        if (typeof navigator.serviceWorker !== 'undefined') {
-          navigator.serviceWorker.register('sw.js')
-        }
-      </script>
-      <script>
-        if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-        navigator.serviceWorker.register('sw.js').then(function(registration) {
-        // Registration was successful
-        console.log('Registered!');
-        }, function(err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
-        }).catch(function(err) {
-        console.log(err);
+      if (typeof navigator.serviceWorker !== "undefined") {
+        navigator.serviceWorker.register("sw.js");
+      }
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("sw.js")
+            .then(
+              function (registration) {
+                // Registration was successful
+                console.log("Registered!");
+              },
+              function (err) {
+                // registration failed :(
+                console.log("ServiceWorker registration failed: ", err);
+              }
+            )
+            .catch(function (err) {
+              console.log(err);
+            });
         });
-        });
-        } else {
-        console.log('service worker is not supported');
+      } else {
+        console.log("service worker is not supported");
+      }
+      navigator.serviceWorker.ready.then(function (registration) {
+        if (!registration.pushManager) {
+          alert("No push notifications support.");
+          return false;
         }
-        </script>
-</body>
-
+        //To subscribe `push notification` from push manager
+        registration.pushManager
+          .subscribe({
+            userVisibleOnly: true, //Always show notification when received
+          })
+          .then(function (subscription) {
+            console.log("Subscribed.");
+          })
+          .catch(function (error) {
+            console.log("Subscription error: ", error);
+          });
+      });
+    </script>
+  </body>
 </html>
