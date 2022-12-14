@@ -86,7 +86,7 @@ async function getJson() {
           
           if (timeNow >= start && timeNow < end && data.Days[j].Date.slice(0, 10) == time.toISOString().slice(0, 10)) {
             html += `<td class="event"><br /><strong>${subject}</strong><br />${teacher}<br />${room}<br /><br /></td>`;
-          } else if(timeNow > end) {
+          } else if(timeNow > end && data.Days[j].Date.slice(0, 10) == time.toISOString().slice(0, 10) || data.Days[j].Date.slice(0, 10) <= time.toISOString().slice(0, 10)) {
             html += `<td class="passed"><br /><strong>${subject}</strong><br />${teacher}<br />${room}<br /><br /></td>`;
           } else {
             html += `<td><br /><strong>${subject}</strong><br />${teacher}<br />${room}<br /><br /></td>`;
