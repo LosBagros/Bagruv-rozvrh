@@ -18,50 +18,5 @@
       <table id="data" class="table table-dark"></table>
     </div>
     <script src="script.js"></script>
-    <script>
-      if (typeof navigator.serviceWorker !== "undefined") {
-        navigator.serviceWorker.register("sw.js");
-      }
-    </script>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-          navigator.serviceWorker
-            .register("sw.js")
-            .then(
-              function (registration) {
-                // Registration was successful
-                console.log("Registered!");
-              },
-              function (err) {
-                // registration failed :(
-                console.log("ServiceWorker registration failed: ", err);
-              }
-            )
-            .catch(function (err) {
-              console.log(err);
-            });
-        });
-      } else {
-        console.log("service worker is not supported");
-      }
-      navigator.serviceWorker.ready.then(function (registration) {
-        if (!registration.pushManager) {
-          alert("No push notifications support.");
-          return false;
-        }
-        //To subscribe `push notification` from push manager
-        registration.pushManager
-          .subscribe({
-            userVisibleOnly: true, //Always show notification when received
-          })
-          .then(function (subscription) {
-            console.log("Subscribed.");
-          })
-          .catch(function (error) {
-            console.log("Subscription error: ", error);
-          });
-      });
-    </script>
   </body>
 </html>
