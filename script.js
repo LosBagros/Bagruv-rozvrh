@@ -59,7 +59,7 @@ async function getJson() {
     date = date.slice(8, 10) + "." + date.slice(5, 7) + ".";
     day = new Date(data.Days[j].Date);
     day = day.toLocaleDateString("cs-CZ", { weekday: "short" });
-    html += `<td><br /><strong>${day}</strong><br />${date}</td>`;
+    html += `<td><br /><strong>${day}</strong><br />${date}<br /></td>`;
     if (data.Days[j].DayDescription != "" && data.Days[j].DayType != "WorkDay") {
       html += `<td colspan="${hours}" class="event"><br />${data.Days[j].DayDescription}<br /><br /></td>`;
     } else if (data.Days[j].DayDescription == "" && data.Days[j].DayType != "WorkDay") {
