@@ -49,7 +49,7 @@ async function getJson() {
       break;
     }
   }
-  for (let i = firstHour; i < firstHour + hours; i++) {
+  for (let i = firstHour; i < hours; i++) {
     html += `<th>${data.Hours[i].Caption}<br />${data.Hours[i].BeginTime}-${data.Hours[i].EndTime}</th>`;
   }
   html += "</tr></thead>";
@@ -67,6 +67,9 @@ async function getJson() {
     } else {
       for (let i = 0; i < data.Days[j].Atoms.length; i++) {
         subjectId = data.Days[j].Atoms[i].SubjectId;
+        hourId = data.Days[j].Atoms[i].HourId;
+        if (hourId == 2) 
+          continue;
         if (subjectId == null) {
           html += `<td class="removed"><br /><br />Removed<br /><br /><br /></td>`;
         } else {
