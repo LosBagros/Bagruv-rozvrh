@@ -11,26 +11,6 @@ setInterval(async function () {
 async function getJson() {
   const response = await fetch("https://rozvrh-api.bagros.eu/");
   const data = await response.json();
-
-  let subjectId;
-  let teacherId;
-  let roomId;
-  let subject;
-  let teacher;
-  let room;
-  let html;
-  let hours;
-  let day;
-  let startArr;
-  let startHours;
-  let startMinutes;
-  let start;
-  let endArr;
-  let endHours;
-  let endMinutes;
-  let end;
-  let date;
-
   
   table = document.querySelector("#data");
   html = "<thead><tr><th></th>";
