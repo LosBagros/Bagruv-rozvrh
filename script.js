@@ -26,6 +26,7 @@ async function getJson() {
   for (let i = 0; i < hours; i++) {
     if (data.Hours[i].BeginTime == "8:00") {
       firstHour = i;
+      firstHourId = data.Hours[i].Id;
       break;
     }
   }
@@ -48,7 +49,7 @@ async function getJson() {
       for (let i = 0; i < data.Days[j].Atoms.length; i++) {
         subjectId = data.Days[j].Atoms[i].SubjectId;
         hourId = data.Days[j].Atoms[i].HourId;
-        if (hourId == 2) 
+        if (hourId < firstHourId) 
           continue;
         if (subjectId == null) {
           html += `<td class="removed"><br /><br />Removed<br /><br /><br /></td>`;
