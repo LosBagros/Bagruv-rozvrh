@@ -30,7 +30,7 @@ async function getJson() {
       break;
     }
   }
-  for (let i = firstHour; i < hours; i++) {
+  for (let i = firstHour; i <= hours; i++) {
     html += `<th>${data.Hours[i].Caption}<br />${data.Hours[i].BeginTime}-${data.Hours[i].EndTime}</th>`;
   }
   html += "</tr></thead>";
