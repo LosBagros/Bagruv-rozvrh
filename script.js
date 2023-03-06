@@ -2,14 +2,19 @@ let time = new Date();
 let timeNow = new Date(time.getFullYear(), time.getMonth(), time.getDate(), time.getHours(), time.getMinutes());
 let minutes = time.getMinutes();
 getJson();
+
 setInterval(async function () {
-  if (minutes % 10 === 5) {
-    console.log("getting data...");
+  time = new Date();
+  timeNow = new Date(time.getFullYear(), time.getMonth(), time.getDate(), time.getHours(), time.getMinutes());
+  minutes = time.getMinutes();
+  if (minutes % 10 == 5) {
+    await new Promise((resolve) => setTimeout(resolve, 10000));
     await getJson();
   }
 }, 60000);
 async function getJson() {
-  const response = await fetch("https://rozvrh-api.bagros.eu/");
+  // const response = await fetch("https://rozvrh-api.bagros.eu/");
+  const response = await fetch("./exampleData.json");
   const data = await response.json();
   
   table = document.querySelector("#data");
