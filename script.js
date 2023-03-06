@@ -13,8 +13,8 @@ setInterval(async function () {
   }
 }, 60000);
 async function getJson() {
-  // const response = await fetch("https://rozvrh-api.bagros.eu/");
-  const response = await fetch("./exampleData.json");
+  const response = await fetch("https://rozvrh-api.bagros.eu/");
+  // const response = await fetch("./exampleData.json");
   const data = await response.json();
   
   table = document.querySelector("#data");
