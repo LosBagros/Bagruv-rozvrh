@@ -28,6 +28,7 @@ async function getJson() {
   }
   let firstHour = 0;
   if (hours == 0) { hours = 8 }
+  if (hours == 11) { hours = 10 }
   for (let i = 0; i < hours; i++) {
     if (data.Hours[i].BeginTime == "8:00") {
       firstHour = i;
