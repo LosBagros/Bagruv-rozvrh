@@ -1,0 +1,1027 @@
+{
+  "Hours": [
+    {
+      "Id": 2,
+      "Caption": "0",
+      "BeginTime": "7:10",
+      "EndTime": "7:55"
+    },
+    {
+      "Id": 3,
+      "Caption": "1",
+      "BeginTime": "8:00",
+      "EndTime": "8:45"
+    },
+    {
+      "Id": 4,
+      "Caption": "2",
+      "BeginTime": "8:55",
+      "EndTime": "9:40"
+    },
+    {
+      "Id": 5,
+      "Caption": "3",
+      "BeginTime": "9:50",
+      "EndTime": "10:35"
+    },
+    {
+      "Id": 6,
+      "Caption": "4",
+      "BeginTime": "10:50",
+      "EndTime": "11:35"
+    },
+    {
+      "Id": 7,
+      "Caption": "5",
+      "BeginTime": "11:45",
+      "EndTime": "12:30"
+    },
+    {
+      "Id": 8,
+      "Caption": "6",
+      "BeginTime": "12:40",
+      "EndTime": "13:25"
+    },
+    {
+      "Id": 9,
+      "Caption": "7",
+      "BeginTime": "13:35",
+      "EndTime": "14:20"
+    },
+    {
+      "Id": 10,
+      "Caption": "8",
+      "BeginTime": "14:25",
+      "EndTime": "15:10"
+    },
+    {
+      "Id": 11,
+      "Caption": "9",
+      "BeginTime": "15:15",
+      "EndTime": "16:00"
+    },
+    {
+      "Id": 12,
+      "Caption": "10",
+      "BeginTime": "16:05",
+      "EndTime": "16:50"
+    }
+  ],
+  "Days": [
+    {
+      "Atoms": [
+        {
+          "HourId": 3,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "0P",
+          "TeacherId": "UR04T",
+          "RoomId": "2A",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 4,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "0P",
+          "TeacherId": "UR04T",
+          "RoomId": "2A",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 5,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "1L",
+          "TeacherId": "UR04Q",
+          "RoomId": "1E",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 6,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_1",
+          "TeacherId": "UR02N",
+          "RoomId": "1E",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 7,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_3",
+          "TeacherId": "UR03B",
+          "RoomId": "1R",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 8,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_M",
+          "TeacherId": "UW07Q",
+          "RoomId": "20",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 9,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_M",
+          "TeacherId": "UW07Q",
+          "RoomId": "20",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        }
+      ],
+      "DayOfWeek": 1,
+      "Date": "2022-12-12T00:00:00+01:00",
+      "DayDescription": "",
+      "DayType": "WorkDay"
+    },
+    {
+      "Atoms": [
+        {
+          "HourId": 3,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_4",
+          "TeacherId": "UR048",
+          "RoomId": "2K",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 4,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_3",
+          "TeacherId": "UR03B",
+          "RoomId": "1R",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 5,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_2",
+          "TeacherId": "US05U",
+          "RoomId": "28",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 6,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_1",
+          "TeacherId": "UR02N",
+          "RoomId": "1E",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 7,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_K",
+          "TeacherId": "UR02K",
+          "RoomId": "1P",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 8,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_D",
+          "TeacherId": "UV079",
+          "RoomId": "1Z",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 9,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_P",
+          "TeacherId": "UV07E",
+          "RoomId": "27",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        }
+      ],
+      "DayOfWeek": 2,
+      "Date": "2022-12-13T00:00:00+01:00",
+      "DayDescription": "",
+      "DayType": "WorkDay"
+    },
+    {
+      "Atoms": [
+        {
+          "HourId": 3,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_O",
+          "TeacherId": "UW07Q",
+          "RoomId": "20",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 4,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_O",
+          "TeacherId": "UW07Q",
+          "RoomId": "20",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 5,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_D",
+          "TeacherId": "UV079",
+          "RoomId": "1Z",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 6,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_3",
+          "TeacherId": "UR03B",
+          "RoomId": "1R",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 7,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_2",
+          "TeacherId": "US05U",
+          "RoomId": "28",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 8,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_Q",
+          "TeacherId": "UR02N",
+          "RoomId": "1E",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 9,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_9",
+          "TeacherId": "UV07F",
+          "RoomId": "1P",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        }
+      ],
+      "DayOfWeek": 3,
+      "Date": "2022-12-14T00:00:00+01:00",
+      "DayDescription": "",
+      "DayType": "WorkDay"
+    },
+    {
+      "Atoms": [
+        {
+          "HourId": 3,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_L",
+          "TeacherId": "UU06R",
+          "RoomId": "25",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 4,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_1",
+          "TeacherId": "UR02N",
+          "RoomId": "1E",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 5,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_P",
+          "TeacherId": "UV07E",
+          "RoomId": "27",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 6,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_P",
+          "TeacherId": "UV07E",
+          "RoomId": "27",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 7,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_D",
+          "TeacherId": "UV079",
+          "RoomId": "1Z",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 8,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_2",
+          "TeacherId": "US05U",
+          "RoomId": "28",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        }
+      ],
+      "DayOfWeek": 4,
+      "Date": "2022-12-15T00:00:00+01:00",
+      "DayDescription": "",
+      "DayType": "WorkDay"
+    },
+    {
+      "Atoms": [
+        {
+          "HourId": 3,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "1L",
+          "TeacherId": "UR04Q",
+          "RoomId": "1M",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 4,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "1L",
+          "TeacherId": "UR04Q",
+          "RoomId": "1M",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 5,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_3",
+          "TeacherId": "UR03B",
+          "RoomId": "1R",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 6,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_4",
+          "TeacherId": "UR048",
+          "RoomId": "2J",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 7,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_I",
+          "TeacherId": "UW07M",
+          "RoomId": "20",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        },
+        {
+          "HourId": 8,
+          "GroupIds": [
+            "68"
+          ],
+          "SubjectId": "_Q",
+          "TeacherId": "UR02N",
+          "RoomId": "1E",
+          "CycleIds": [
+            "0"
+          ],
+          "Change": null,
+          "HomeworkIds": [],
+          "Theme": ""
+        }
+      ],
+      "DayOfWeek": 5,
+      "Date": "2022-12-16T00:00:00+01:00",
+      "DayDescription": "",
+      "DayType": "WorkDay"
+    }
+  ],
+  "Classes": [
+    {
+      "Id": "36",
+      "Abbrev": "2ITA",
+      "Name": ""
+    }
+  ],
+  "Groups": [
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    },
+    {
+      "ClassId": "36",
+      "Id": "68",
+      "Abbrev": "2ITA",
+      "Name": ""
+    }
+  ],
+  "Subjects": [
+    {
+      "Id": "0P",
+      "Abbrev": "HEV",
+      "Name": "Herní vývoj"
+    },
+    {
+      "Id": "1L",
+      "Abbrev": "DAT",
+      "Name": "Databáze"
+    },
+    {
+      "Id": "_1",
+      "Abbrev": "CJL",
+      "Name": "Český jazyk a literatura"
+    },
+    {
+      "Id": "_3",
+      "Abbrev": "MAT",
+      "Name": "Matematika"
+    },
+    {
+      "Id": "_M",
+      "Abbrev": "PVA",
+      "Name": "Programování a vývoj aplikací"
+    },
+    {
+      "Id": "_4",
+      "Abbrev": "TEV",
+      "Name": "Tělesná výchova"
+    },
+    {
+      "Id": "_2",
+      "Abbrev": "ANJ",
+      "Name": "Anglický jazyk"
+    },
+    {
+      "Id": "_K",
+      "Abbrev": "ALG",
+      "Name": "Algoritmizace"
+    },
+    {
+      "Id": "_D",
+      "Abbrev": "FYZ",
+      "Name": "Fyzika"
+    },
+    {
+      "Id": "_P",
+      "Abbrev": "DAS",
+      "Name": "Datové sítě"
+    },
+    {
+      "Id": "_O",
+      "Abbrev": "WEA",
+      "Name": "Webové aplikace"
+    },
+    {
+      "Id": "_Q",
+      "Abbrev": "NEJ2",
+      "Name": "Německý jazyk"
+    },
+    {
+      "Id": "_9",
+      "Abbrev": "ZPV",
+      "Name": "Základy přírodních věd"
+    },
+    {
+      "Id": "_L",
+      "Abbrev": "APS",
+      "Name": "Aplikační software"
+    },
+    {
+      "Id": "_I",
+      "Abbrev": "OBN",
+      "Name": "Občanská nauka"
+    }
+  ],
+  "Teachers": [
+    {
+      "Id": "UR04T",
+      "Abbrev": "Med",
+      "Name": ""
+    },
+    {
+      "Id": "UR04Q",
+      "Abbrev": "Sýk",
+      "Name": ""
+    },
+    {
+      "Id": "UR02N",
+      "Abbrev": "Bry",
+      "Name": ""
+    },
+    {
+      "Id": "UR03B",
+      "Abbrev": "Pet",
+      "Name": ""
+    },
+    {
+      "Id": "UW07Q",
+      "Abbrev": "Ver",
+      "Name": ""
+    },
+    {
+      "Id": "UR048",
+      "Abbrev": "Nea",
+      "Name": ""
+    },
+    {
+      "Id": "US05U",
+      "Abbrev": "Loj",
+      "Name": ""
+    },
+    {
+      "Id": "UR02K",
+      "Abbrev": "Bnš",
+      "Name": ""
+    },
+    {
+      "Id": "UV079",
+      "Abbrev": "Hof",
+      "Name": ""
+    },
+    {
+      "Id": "UV07E",
+      "Abbrev": "Mit",
+      "Name": ""
+    },
+    {
+      "Id": "UV07F",
+      "Abbrev": "Sol",
+      "Name": ""
+    },
+    {
+      "Id": "UU06R",
+      "Abbrev": "Dou",
+      "Name": ""
+    },
+    {
+      "Id": "UW07M",
+      "Abbrev": "Vln",
+      "Name": ""
+    }
+  ],
+  "Rooms": [
+    {
+      "Id": "2A",
+      "Abbrev": "S427",
+      "Name": ""
+    },
+    {
+      "Id": "1E",
+      "Abbrev": "S127",
+      "Name": ""
+    },
+    {
+      "Id": "1R",
+      "Abbrev": "S229",
+      "Name": ""
+    },
+    {
+      "Id": "20",
+      "Abbrev": "S329",
+      "Name": ""
+    },
+    {
+      "Id": "2K",
+      "Abbrev": "SKRY",
+      "Name": ""
+    },
+    {
+      "Id": "28",
+      "Abbrev": "S424",
+      "Name": ""
+    },
+    {
+      "Id": "1P",
+      "Abbrev": "S225",
+      "Name": ""
+    },
+    {
+      "Id": "1Z",
+      "Abbrev": "S327",
+      "Name": ""
+    },
+    {
+      "Id": "27",
+      "Abbrev": "S423",
+      "Name": ""
+    },
+    {
+      "Id": "25",
+      "Abbrev": "S420",
+      "Name": ""
+    },
+    {
+      "Id": "1M",
+      "Abbrev": "S222",
+      "Name": ""
+    },
+    {
+      "Id": "2J",
+      "Abbrev": "SHAL",
+      "Name": ""
+    }
+  ],
+  "Cycles": [
+    {
+      "Id": "0",
+      "Abbrev": "S",
+      "Name": "sudý týden"
+    }
+  ]
+}
